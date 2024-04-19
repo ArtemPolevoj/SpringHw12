@@ -17,6 +17,7 @@ import java.util.NoSuchElementException;
 @RequestMapping("book")
 public class BookController {
     private final BookService service;
+    @Timer
     @GetMapping("{id}")
     public ResponseEntity<Book> findById(@PathVariable Long id) {
         try {

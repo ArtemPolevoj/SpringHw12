@@ -20,6 +20,7 @@ import java.util.TreeMap;
 public class IssueController {
 
     private final IssueService service;
+    @Timer
     @PostMapping
     public ResponseEntity<Issue> issueBook(@RequestBody IssueRequest issueRequest) {
         log.info("Поступил запрос на выдачу: idReader={}, bookId={}"
